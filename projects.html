@@ -1,128 +1,114 @@
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="HandheldFriendly" content="true"> 
-    <meta name="author" content="Rui Viveiros">
-    <meta name="language" content="english">
-    <meta name="description" content="Developer Portfolio of Rui Viveiros">
-    <meta name="title" content="Rui Viveiros | Projects">
-    <meta name="robots" content="index,follow">
-    <meta name="copyright" content="Copyright 2024 Rui Viveiros">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="author" content="Rui Viveiros" />
+    <meta name="language" content="english" />
+    <meta name="description" content="Developer Portfolio of Rui Viveiros" />
+    <meta name="title" content="Rui Viveiros | Projects" />
+    <meta name="robots" content="index,follow" />
+    <meta name="copyright" content="Copyright 2024 Rui Viveiros" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Rui Viveiros | Projects</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav-flex">
-            <a href="index.html" class="link">About me</a>
-            <a href="" class="link">Blog</a>
-            <a href="projects.html" class="link">Projects</a>
-            <a href="resume.html" class="link">Resumee</a>
-            <a href="contact.html" class="link">Contact</a>
+      <a href="index.html" class="link">About me</a>
+      <a href="projects.html" class="link">Projects</a>
+      <a href="resume.html" class="link">Resumee</a>
+      <a href="contact.html" class="link">Contact</a>
+      <a href="https://rui-viveiros.vercel.app" class="link">Blog</a>
     </nav>
-    <h1 style="text-align: center;">Personal webpage</h1>   
-    <div class="video" style="justify-content: center;">
-    <video  src="static/oldwebsite.mp4" width="500" controls></video>
-    </div> <br>
-    <p style="text-align: center;">A my previous single page site made using the Bootstrap framework.</p>
-    <h1 style="text-align: center;">Photography Portfolio</h1>   
-    <div class="video" style="justify-content: center;">
-    <img src="static/gallery-preview.gif" width="500" alt="website walkthougth">
-    </div><br>
-    <p style="text-align: center;">A web gallery for some photos I took over the years.
-    The portefolio was made with Tailwind CSS and some JS for animations. You can visit the gallery <a href="https://alanbitts-gallery.netlify.app/">here</a>.</p>
-    <h1 style="text-align: center;">Dealership</h1>
-    <p style="text-align: center;">This project was made for the capstone project of my final course. It comprises a full-stack web application
-    with a sentiment analyser, two API endpoints for fetching data about the dealerships and the cars in stock and a datbase for handling user registration.</p>
-    <br><br>
-    <!-- Slideshow container -->
-<div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1</div>
-      <img src="static/screenshots/about_us.png" style="width:100%">
-      <div class="text">Informational section</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2</div>
-      <img src="static/screenshots/sign-up.png" style="width:100%">
-      <div class="text">Sign up form made with React and saved on a MongoDB</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3</div>
-      <img src="static/screenshots/admin_login.png" style="width:100%">
-      <div class="text">Django admin panel</div>
+    <!-- Projects -->
+    <div class="accordion">
+      <details>
+        <summary aria-describedby="accordion">
+          <span role="term">Blog platform</span>
+        </summary>
+      </details>
+
+      <div class="content">
+        <p class="inner" role="definition" id="accordion">
+          A fully functional blog platform built using Node.js, Express, and
+          MongoDB, designed to demonstrate core full‑stack development skills.
+          The application allows users to create, read, update, and delete blog
+          posts, with clean routing, server‑side rendering, and a structured
+          MVC‑style architecture.
+          <br />Visit <a href="https://rui-viveiros.vercel.app">here</a>.
+        </p>
+      </div>
     </div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">4</div>
-        <img src="static/screenshots/admin_logout.png" style="width:100%">
-        <div class="text">Loging out</div>
+    <div class="accordion">
+      <details>
+        <summary aria-describedby="accordion">
+          <span role="term">Personal Website</span>
+        </summary>
+      </details>
+
+      <div class="content">
+        <p class="inner" role="definition" id="accordion">
+          A my previous single page site made using the Bootstrap framework.
+          <video
+            src="static/oldwebsite.mp4"
+            width="100%"
+            height="auto"
+            controls
+          ></video>
+        </p>
       </div>
+    </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">5</div>
-        <img src="static/screenshots/cars.png" style="width:100%">
-        <div class="text">fetching car data in Json</div>
+    <div class="accordion">
+      <details>
+        <summary aria-describedby="accordion">
+          <span role="term">Photography Portfolio</span>
+        </summary>
+      </details>
+
+      <div class="content">
+        <p class="inner" role="definition" id="accordion">
+          A web gallery for some photos I took over the years. The portfolio was
+          made with Tailwind CSS and some JS for animations. You can visit the
+          gallery <a href="https://alanbitts-gallery.netlify.app/">here</a>
+        </p>
       </div>
+    </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">6</div>
-        <img src="static/screenshots/dealer_details.png" style="width:100%">
-        <div class="text">fetching dealer and reviews, also in Json</div>
+    <div class="accordion">
+      <details>
+        <summary aria-describedby="accordion">
+          <span role="term">Dealership</span>
+        </summary>
+      </details>
+
+      <div class="content">
+        <p class="inner" role="definition" id="accordion">
+          This project was made for the capstone project of my final course. It
+      comprises a full-stack web application with a sentiment analyser, two API
+      endpoints for fetching data about the dealerships and the cars in stock
+      and a database for handling user registration.<br>
+        </p>
       </div>
+    </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">7</div>
-        <img src="static/screenshots/CICD.png" style="width:100%">
-        <div class="text">Continous integration and delivery</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">8</div>
-        <img src="static/screenshots/dealersbystate.png" style="width:100%">
-        <div class="text">Filtering dealers by state</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">9</div>
-        <img src="static/screenshots/django_server.png" style="width:100%">
-        <div class="text">Django server running without errors</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">10</div>
-        <img src="static/screenshots/sentiment_analyzer.png" style="width:100%">
-        <div class="text">the response in Json from the sentiment analizer microservice</div>
-      </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-
-    The screenshots are in no particular order. The webapp is not currently deployed so I can not share a link.
-    
     <footer>
-        <nav class="nav-flex">
-            <a class="link" href="https://www.linkedin.com/in/alanbitts/">LinkedIn</a>
-            <a class="link" href="https://github.com/AlanBitts">GitHub</a>
-            ©️ 2024 Rui Viveiros
-            <a href="index.html" class="link">back to main</a>
-        </nav>
+      <nav class="nav-flex">
+        <a class="link" href="https://www.linkedin.com/in/alanbitts/"
+          >LinkedIn</a
+        >
+        <a class="link" href="https://github.com/AlanBitts">GitHub</a>
+        ©️
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Rui Viveiros
+        <a href="index.html" class="link">back to main</a>
+      </nav>
     </footer>
     <script src="js/slideshow.js"></script>
-</body>
+  </body>
 </html>
