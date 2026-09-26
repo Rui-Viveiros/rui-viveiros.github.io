@@ -13,17 +13,21 @@
     <meta name="robots" content="index,follow">
     <meta name="copyright" content="Copyright 2024 Rui Viveiros">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/navigation.js" defer></script>
     <meta name="format-detection" content="telephone=yes"/>
     <title>Rui Viveiros | Robot Teleoperator</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-        <nav class="nav-flex" role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="link">About me</a>
-            <a href="projects.html" class="link">Systems</a>
-            <a href="contact.html" class="link">Contact</a>
-            <a href="https://rui-viveiros.vercel.app" class="link">Blog</a>
+        <nav class="nav-flex header-nav" role="navigation" aria-label="Main navigation">
+            <button class="header-nav-toggle" type="button" aria-controls="header-nav-links" aria-expanded="false" aria-label="Toggle main navigation">MENU</button>
+            <div class="header-nav-links" id="header-nav-links">
+                <a href="index.html" class="link">About me</a>
+                <a href="projects.html" class="link">Systems</a>
+                <a href="contact.html" class="link">Contact</a>
+                <a href="https://rui-viveiros.vercel.app" class="link">Blog</a>
+            </div>
     </nav>
     <main id="main-content" role="main">
         <p class="eyebrow">Datamentors // Teleoperation and Data Team</p>
@@ -45,7 +49,7 @@
             </div>
         <section>
             <h2>More information</h2>
-                <p>If you would like to chat with me or need help with a project, open a <a href="contact.html">secure channel</a>.</p>
+                <p>To establish contact open a<a href="contact.html">secure channel</a>.</p>
         </section>
     </main>
     <footer>

@@ -8,91 +8,61 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="author" content="Rui Viveiros" />
     <meta name="language" content="english" />
-    <meta name="description" content="Systems and projects by Rui Viveiros." />
+    <meta name="description" content="Robotics operations and data workflows used by Rui Viveiros." />
     <meta name="title" content="Rui Viveiros | Systems" />
     <meta name="robots" content="index,follow" />
     <meta name="copyright" content="Copyright 2024 Rui Viveiros" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/navigation.js" defer></script>
     <title>Rui Viveiros | Systems</title>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav class="nav-flex" role="navigation" aria-label="Main navigation">
-      <a href="index.html" class="link">About me</a>
-      <a href="projects.html" class="link">Systems</a>
-      <a href="contact.html" class="link">Contact</a>
-      <a href="https://rui-viveiros.vercel.app" class="link">Blog</a>
+    <nav class="nav-flex header-nav" role="navigation" aria-label="Main navigation">
+      <button class="header-nav-toggle" type="button" aria-controls="header-nav-links" aria-expanded="false" aria-label="Toggle main navigation">MENU</button>
+      <div class="header-nav-links" id="header-nav-links">
+        <a href="index.html" class="link">About me</a>
+        <a href="projects.html" class="link">Systems</a>
+        <a href="contact.html" class="link">Contact</a>
+        <a href="https://rui-viveiros.vercel.app" class="link">Blog</a>
+      </div>
     </nav>
 
     <main id="main-content" role="main">
 
-    <!-- Systems -->
+    <h1>Systems</h1>
+    <p class="inner">Operating systems, command-line tools, and development workflows I use.</p>
+
     <div class="accordion">
       <details>
-        <summary aria-describedby="accordion">
-          <span role="term">Blog Platform</span>
-        </summary>
+        <summary><span>Operating systems</span></summary>
       </details>
-
       <div class="content">
-        <p class="inner" role="definition" id="accordion">
-          A fully functional blog platform built with Node.js, Express, and MongoDB to demonstrate
-          core full-stack development skills. The application lets users create, read, update, and
-          delete blog posts with clean routing, server-side rendering, and a structured MVC architecture.
-          <br />Visit it <a href="https://rui-viveiros.vercel.app">here</a>.
+        <p class="inner">
+          Linux and macOS for everyday computing and development.
         </p>
       </div>
     </div>
 
     <div class="accordion">
       <details>
-        <summary aria-describedby="accordion">
-          <span role="term">Personal Website</span>
-        </summary>
+        <summary><span>Terminal, remote access, and containers</span></summary>
       </details>
-
       <div class="content">
-        <p class="inner" role="definition" id="accordion">
-          My previous single-page website, built using the Bootstrap framework.
-          <video
-            src="static/oldwebsite.mp4"
-            width="100%"
-            height="auto"
-            controls
-          ></video>
+        <p class="inner">
+          Bash for terminal work and scripting, SSH for secure access to remote machines, and Docker for building and running containerized environments.
         </p>
       </div>
     </div>
 
     <div class="accordion">
       <details>
-        <summary aria-describedby="accordion">
-          <span role="term">Photography Portfolio</span>
-        </summary>
+        <summary><span>Coding and version control</span></summary>
       </details>
-
       <div class="content">
-        <p class="inner" role="definition" id="accordion">
-          A web gallery featuring photographs I have taken over the years. The portfolio was
-          built with Tailwind CSS and a little JavaScript for animation. Visit the
-          gallery <a href="https://alanbitts-gallery.netlify.app/">here</a>.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <details>
-        <summary aria-describedby="accordion">
-          <span role="term">Dealership Platform</span>
-        </summary>
-      </details>
-
-      <div class="content">
-        <p class="inner" role="definition" id="accordion">
-            This project was built as the final project for my previous course. It is a
-            full-stack web application with a sentiment analyzer, two API endpoints for
-            dealership and vehicle inventory data, and a database for user registration.<br>
+        <p class="inner">
+          Git and GitHub for tracking changes and managing repositories, with Claude as a coding assistant.
         </p>
       </div>
     </div>

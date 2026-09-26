@@ -456,12 +456,12 @@ summary::-webkit-details-marker { /* Hide default arrow on Safari */
   display: none;
 }
 
-span {
+.accordion summary span {
   display: flex;
   justify-content: space-between;
 }
 
-span:after {
+.accordion summary span:after {
   content: "\276F";
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -483,7 +483,7 @@ details[open] + .content {
   padding: 10px;
 }
 
-details[open] span:after {
+.accordion details[open] summary span:after {
   transform: rotate(270deg);
 }
 
@@ -647,7 +647,338 @@ details[open] span:after {
     padding: 12px 16px;
     margin: 8px;
   }
+}
 
+
+  :root {
+    --screen-green: #b6d9a5;
+    --phosphor: #8fc77d;
+    --amber: #e1a867;
+    --muted-green: #768b70;
+    --terminal-black: #101511;
+    --terminal-panel: #171d18;
+    --terminal-line: #52634f;
+  }
+
+  body {
+    background-color: var(--terminal-black);
+    background-image:
+      linear-gradient(90deg, rgba(143, 199, 125, 0.035) 1px, transparent 1px),
+      linear-gradient(rgba(143, 199, 125, 0.025) 1px, transparent 1px),
+      linear-gradient(145deg, #1a211b 0%, #0c100d 52%, #181814 100%);
+    background-size: 32px 32px, 32px 32px, auto;
+    color: var(--screen-green);
+  }
+
+  body::before {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(220, 239, 196, 0.035) 0,
+      rgba(220, 239, 196, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    z-index: 3;
+  }
+
+  h1, h2 {
+    color: var(--phosphor);
+    text-shadow: 0 0 8px rgba(143, 199, 125, 0.28);
+  }
+
+  h1 {
+    border-bottom-color: var(--amber);
+  }
+
+  h2 {
+    border-left-color: var(--amber);
+  }
+
+  h3 {
+    color: var(--amber);
+    text-shadow: none;
+  }
+
+  main {
+    margin-top: 26px;
+    padding-top: 58px;
+    background: linear-gradient(145deg, rgba(25, 32, 26, 0.98), rgba(13, 17, 14, 0.98));
+    border: 1px solid var(--terminal-line);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), inset 0 0 35px rgba(143, 199, 125, 0.035);
+  }
+
+  main::before {
+    content: 'PERSONNEL TERMINAL  /  NETWORK ACCESS: ACTIVE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 36px;
+    padding: 8px 18px;
+    border-bottom: 1px solid var(--terminal-line);
+    background: linear-gradient(90deg, rgba(143, 199, 125, 0.12), transparent 75%);
+    color: var(--amber);
+    font-size: 0.78em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+  }
+
+  p {
+    color: #c5cabb;
+  }
+
+  .nav-flex {
+    background: rgba(19, 25, 20, 0.96);
+    border: 1px solid var(--terminal-line);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    color: var(--screen-green);
+  }
+
+  a::after {
+    background: var(--amber);
+  }
+
+  a:hover {
+    color: var(--amber);
+    text-shadow: 0 0 8px rgba(225, 168, 103, 0.35);
+  }
+
+  nav a:active {
+    background-color: rgba(225, 168, 103, 0.15);
+  }
+
+  .accordion,
+  .flex-child,
+  .mission-card {
+    border: 1px solid var(--terminal-line);
+    border-radius: 0;
+    background: rgba(143, 199, 125, 0.035);
+  }
+
+  .accordion summary {
+    background: rgba(143, 199, 125, 0.08);
+    color: var(--phosphor);
+    text-shadow: none;
+  }
+
+  .accordion summary:hover,
+  .accordion details[open] summary {
+    background: rgba(143, 199, 125, 0.15);
+    color: var(--screen-green);
+  }
+
+  .accordion details[open] summary {
+    border-bottom-color: var(--amber);
+  }
+
+  .accordion .inner {
+    color: #c5cabb;
+  }
+
+  .flex-child h3 {
+    color: var(--phosphor);
+    text-shadow: none;
+  }
+
+  .flex-child li:before {
+    color: var(--amber);
+  }
+
+  hr {
+    border-top-color: var(--terminal-line);
+  }
+
+  .eyebrow,
+  .label,
+  .portrait-status,
+  .status-line {
+    color: var(--amber);
+    font-size: 0.78em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .operator-portrait {
+    width: fit-content;
+    max-width: 100%;
+    margin: 24px auto;
+    padding: 12px;
+    border: 1px solid var(--terminal-line);
+    background: #111712;
+  }
+
+  .portrait-frame {
+    position: relative;
+    padding: 8px;
+    border: 1px solid var(--phosphor);
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 0;
+    border-radius: 0;
+    filter: saturate(0.65) contrast(1.08);
+    box-shadow: none;
+  }
+
+  .profile-photo:hover {
+    box-shadow: 0 0 14px rgba(143, 199, 125, 0.3);
+    transform: none;
+  }
+
+  .portrait-status {
+    display: block;
+    padding: 5px 2px 0;
+    text-align: center;
+  }
+
+  .operator-portrait figcaption {
+    padding-top: 10px;
+    color: var(--screen-green);
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  .operator-portrait figcaption span {
+    display: inline;
+    color: var(--amber);
+  }
+
+  .operator-portrait figcaption span::after {
+    content: none;
+  }
+
+  .hero-copy {
+    max-width: 700px;
+    margin: 0 auto 18px;
+    font-size: 1.08em;
+  }
+
+  .status-line {
+    padding: 10px 12px;
+    border-top: 1px solid var(--terminal-line);
+    border-bottom: 1px solid var(--terminal-line);
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .mission-card {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .mission-card .label {
+    margin-bottom: 8px;
+  }
+
+  .mission-card h3 {
+    margin-top: 0;
+  }
+
+  .mission-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .flex-center form {
+    width: min(100%, 520px);
+    padding: 24px;
+    border: 1px solid var(--terminal-line);
+    background: var(--terminal-panel);
+  }
+
+  label {
+    display: inline-block;
+    margin: 8px 0 2px;
+    color: var(--phosphor);
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: calc(100% - 16px);
+    margin: 4px 8px 12px;
+    background: #0d120e;
+    color: var(--screen-green);
+    border-color: var(--terminal-line);
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--phosphor);
+    box-shadow: 0 0 10px rgba(143, 199, 125, 0.2);
+  }
+
+  button {
+    background: var(--amber);
+    color: #17140f;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    box-shadow: 0 0 14px rgba(225, 168, 103, 0.35);
+    transform: none;
+  }
+
+  button:active {
+    background: var(--phosphor);
+    box-shadow: 0 0 14px rgba(143, 199, 125, 0.3);
+  }
+
+  .copyright {
+    background: #141a15;
+    color: var(--muted-green);
+    border-top: 1px solid var(--terminal-line);
+    box-shadow: none;
+  }
+
+  video {
+    border-color: var(--terminal-line);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.4);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .mission-grid {
+      grid-template-columns: 1fr;
+    }
+
+    main {
+      padding-top: 54px;
+    }
+
+    main::before {
+      font-size: 0.68em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
   .accordion summary {
     padding: 10px;
   }
@@ -764,15 +1095,15 @@ details[open] span:after {
 }
 
 
-span {
+.accordion summary span {
   font-size: 1.1em;
-  background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+  background: none;
   font-weight: 500;
   cursor: pointer;
-  color: #0a0e27;
+  color: var(--hot);
   padding: 0.5rem 0.8rem;
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -828,3 +1159,183 @@ button { background:var(--amber); color:var(--void); font-family:'Share Tech Mon
 footer { border-top:1px solid var(--line); }
 .copyright { background:var(--panel); color:var(--muted); font-family:'Share Tech Mono',monospace; }
 @media (max-width:720px) { .nav-flex { align-items:stretch; flex-direction:column; } main { margin:22px 12px; } .operator-portrait { float:none; margin:20px 0 28px; width:190px; } .flex-container,.mission-grid { grid-template-columns:1fr; } }
+
+/* Shipboard terminal finish */
+:root {
+  --void: #101511;
+  --panel: #171d18;
+  --panel-light: #202820;
+  --line: #58634f;
+  --ink: #c7d0bd;
+  --muted: #a0aa98;
+  --amber: #d49b58;
+  --hot: #a9c795;
+  --signal: #8fae79;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(143, 174, 121, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 174, 121, 0.035) 1px, transparent 1px),
+    linear-gradient(145deg, #1a211b, #0d110e 56%, #171914);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+body::before {
+  background: repeating-linear-gradient(0deg, rgba(232, 239, 217, 0.025) 0, rgba(232, 239, 217, 0.025) 1px, transparent 1px, transparent 4px);
+}
+
+main {
+  padding-top: 74px;
+  position: relative;
+}
+
+main::before,
+.flex-center::before {
+  background: linear-gradient(90deg, rgba(143, 174, 121, 0.11), rgba(23, 29, 24, 0.7));
+  border-bottom: 1px solid var(--line);
+  color: var(--amber);
+  content: 'PERSONAL TERMINAL  /  SYSTEMS ONLINE';
+  font: 0.78rem 'Courier Prime', 'Courier New', monospace;
+  left: 0;
+  letter-spacing: 0.08em;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.flex-center {
+  padding-top: 74px;
+  position: relative;
+}
+
+h1 {
+  color: var(--hot);
+  font-size: 3.2rem;
+  letter-spacing: 0;
+  text-shadow: 0 0 10px rgba(169, 199, 149, 0.18);
+}
+
+h2 {
+  border-left: 2px solid var(--amber);
+  border-bottom-color: var(--line);
+  color: var(--hot);
+  letter-spacing: 0;
+}
+
+h3 {
+  color: var(--signal);
+}
+
+.nav-flex a,
+.accordion summary,
+.accordion summary span {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  letter-spacing: 0;
+}
+
+.accordion summary span {
+  padding: 0.5rem 0;
+}
+
+.accordion summary span::after {
+  color: var(--amber);
+}
+
+a::after {
+  background: var(--amber);
+}
+
+.skip-link {
+  background: var(--amber);
+  color: var(--void);
+}
+
+.profile-photo {
+  aspect-ratio: 1;
+  display: block;
+  height: auto;
+  max-width: 168px;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  main {
+    padding-top: 66px;
+  }
+
+  .flex-center {
+    padding-top: 66px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  main::before,
+  .flex-center::before {
+    font-size: 0.68rem;
+    padding: 10px 14px;
+  }
+}
+
+.header-nav-toggle {
+  display: none;
+}
+
+.header-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .nav-flex.header-nav {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .header-nav-toggle {
+    align-items: center;
+    background: var(--amber);
+    color: var(--void);
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    padding: 10px 14px;
+    width: auto;
+  }
+
+  .header-nav-toggle::before {
+    background: currentColor;
+    box-shadow: 0 5px currentColor, 0 10px currentColor;
+    content: '';
+    height: 2px;
+    width: 18px;
+  }
+
+  .header-nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 8px;
+  }
+
+  .header-nav.is-open .header-nav-links {
+    display: flex;
+  }
+
+  .header-nav-links a {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
