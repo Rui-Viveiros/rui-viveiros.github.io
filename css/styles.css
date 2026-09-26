@@ -791,3 +791,40 @@ body {
 .content { 
   padding: 0 10px;
 }
+
+/* Robot teleoperator control-room theme */
+:root { --void:#111314; --panel:#1a1e1e; --panel-light:#242a28; --line:#59605b; --ink:#edf0dd; --muted:#a9afa0; --amber:#f4b942; --hot:#ffd166; --signal:#76c893; }
+body { background:var(--void); color:var(--ink); font-family:'Share Tech Mono','Courier New',monospace; max-width:none; padding:0; }
+body::before { background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 4px); content:''; inset:0; pointer-events:none; position:fixed; z-index:5; }
+a { color:var(--hot); }
+.nav-flex { background:var(--panel); border:0; border-bottom:1px solid var(--line); border-radius:0; box-shadow:none; margin:0 auto; max-width:1100px; padding:18px 20px; }
+.nav-flex a { color:var(--hot); font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
+.nav-flex a:hover { background:var(--amber); color:var(--void); }
+main { background:rgba(26,30,30,.94); border:1px solid var(--line); box-shadow:0 18px 60px rgba(0,0,0,.3); margin:44px auto; max-width:1100px; padding:clamp(24px,5vw,64px); }
+h1 { color:var(--hot); font-size:clamp(2.6rem,8vw,6rem); letter-spacing:.03em; line-height:.95; text-transform:uppercase; }
+h2 { border-bottom:1px solid var(--amber); color:var(--hot); font-family:'Share Tech Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+h3 { color:var(--signal); text-transform:uppercase; }
+p,li { color:var(--muted); }
+.eyebrow,.status-line,.label { color:var(--signal); font-family:'Share Tech Mono',monospace; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; }
+.hero-copy { font-size:1.15rem; max-width:62ch; }
+.hero-copy strong { color:var(--ink); }
+.status-line { border-left:3px solid var(--amber); margin:24px 0; padding-left:12px; }
+.operator-portrait { float:right; margin:20px 0 30px 30px; width:190px; }
+.portrait-frame { background:var(--panel-light); border:1px solid var(--amber); padding:10px; position:relative; }
+.portrait-frame::after { border:1px solid rgba(118,200,147,.5); content:''; inset:5px; pointer-events:none; position:absolute; }
+.profile-photo { border:0; border-radius:0; display:block; filter:grayscale(.35) sepia(.18) contrast(1.08); height:168px; object-fit:cover; width:168px; }
+.portrait-status { background:var(--amber); border-radius:0; bottom:10px; box-shadow:none; color:var(--void); display:block; font:10px 'Share Tech Mono',monospace; left:10px; letter-spacing:.04em; padding:3px 5px; position:absolute; z-index:1; }
+.operator-portrait figcaption { color:var(--hot); font:12px 'Share Tech Mono',monospace; letter-spacing:.08em; padding-top:9px; }
+.operator-portrait figcaption span { background:none; border-radius:0; box-shadow:none; color:var(--signal); display:inline; font:10px 'Share Tech Mono',monospace; padding:0; }
+.flex-container,.mission-grid { display:grid; gap:16px; grid-template-columns:repeat(2,1fr); }
+.mission-grid { grid-template-columns:repeat(3,1fr); margin:26px 0; }
+.flex-child,.mission-card { background:var(--panel-light); border:1px solid var(--line); padding:22px; }
+.mission-card p { font-size:.95rem; }
+.accordion { background:var(--panel); border:1px solid var(--line); border-radius:0; box-shadow:none; }
+.accordion summary { background:var(--panel-light); color:var(--hot); font-family:'Share Tech Mono',monospace; text-transform:uppercase; }
+.accordion .content { background:var(--panel); padding:20px; }
+input,textarea { background:var(--void); border:1px solid var(--line); color:var(--ink); font-family:'Share Tech Mono',monospace; padding:12px; width:100%; }
+button { background:var(--amber); color:var(--void); font-family:'Share Tech Mono',monospace; text-transform:uppercase; }
+footer { border-top:1px solid var(--line); }
+.copyright { background:var(--panel); color:var(--muted); font-family:'Share Tech Mono',monospace; }
+@media (max-width:720px) { .nav-flex { align-items:stretch; flex-direction:column; } main { margin:22px 12px; } .operator-portrait { float:none; margin:20px 0 28px; width:190px; } .flex-container,.mission-grid { grid-template-columns:1fr; } }
