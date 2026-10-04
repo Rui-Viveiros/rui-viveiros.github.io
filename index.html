@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="HandheldFriendly" content="true"> 
+    <meta name="HandheldFriendly" content="true">
     <meta name="author" content="Rui Viveiros">
     <meta name="language" content="english">
     <meta name="description" content="Rui Viveiros, Robot Teleoperator.">
@@ -18,36 +18,61 @@
     <title>Rui Viveiros | Robot Teleoperator</title>
 </head>
 <body>
-        <nav class="nav-flex header-nav" role="navigation" aria-label="Main navigation">
-            <button class="header-nav-toggle" type="button" aria-controls="header-nav-links" aria-expanded="false" aria-label="Toggle main navigation">MENU</button>
-            <div class="header-nav-links" id="header-nav-links">
-                <a href="index.html" class="link">About me</a>
-                <a href="operations.html" class="link">Operations</a>
-                <a href="contact.html" class="link">Contact</a>
-            </div>
+    <nav class="nav-flex header-nav" role="navigation" aria-label="Main navigation">
+        <button class="header-nav-toggle" type="button" aria-controls="header-nav-links" aria-expanded="false" aria-label="Toggle main navigation">Menu</button>
+        <div class="header-nav-links" id="header-nav-links">
+            <a href="index.html" class="link">About me</a>
+            <a href="links.html" class="link">Links</a>
+        </div>
     </nav>
+
     <main id="main-content" role="main">
-        <p class="eyebrow">Teleoperation and Data Team</p>
-        <h1>Robot<br>Teleoperator</h1>
-        <figure class="operator-portrait">
-            <div class="portrait-frame">
-                <img src="./static/hero.jpeg" alt="Portrait of Rui Viveiros" class="profile-photo">
-                <span class="portrait-status">IDENTITY VERIFIED</span>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="window-controls" aria-hidden="true">
+                    <span class="window-control red"></span>
+                    <span class="window-control yellow"></span>
+                    <span class="window-control green"></span>
+                </div>
+                <div class="terminal-title">rui@portfolio:~/about</div>
             </div>
-            <figcaption>RUI VIVEIROS <span>// OPERATOR ID 01</span></figcaption>
-        </figure>
-        <p class="hero-copy"><strong>I teleoperate quadruped robots, humanoids, and drones.</strong> I lead data collection that helps train artificial intelligence models.</p>
-        <p class="status-line">STATUS: DATA COLLECTION ACTIVE // SIGNAL STABLE</p>
-        <section class="mission-grid" aria-label="Core responsibilities">
-            <article class="mission-card"><p class="label">01 / Operations</p><h3>Robots & drones</h3><p>Run manipulation and locomotion sessions following engineering-defined protocols.</p></article>
-            <article class="mission-card"><p class="label">02 / Data</p><h3>AI training</h3><p>Validate, annotate, and prepare collected data for model training.</p></article>
-            <article class="mission-card"><p class="label">03 / Field</p><h3>Mission ready</h3><p>Check equipment, support client demonstrations, and assist with occasional on-site operations.</p></article>
-        </section>
+
+            <div class="terminal-body">
+                <div class="hero-layout">
+                    <div>
+                        <h1>Robot<br>Teleoperator</h1>
+                        <p class="hero-copy"><strong>I teleoperate quadruped robots, humanoids, and drones.</strong> I lead data collection that helps train artificial intelligence models.</p>
+                        <p class="status-line">Status: Data collection active // signal stable</p>
+                    </div>
+
+                    <figure class="operator-portrait">
+                        <div class="portrait-frame">
+                            <img src="./static/hero.jpeg" alt="Portrait of Rui Viveiros" class="profile-photo">
+                            <span class="portrait-status">Identity verified</span>
+                        </div>
+                        <figcaption>Rui Viveiros <span>// Operator ID 01</span></figcaption>
+                    </figure>
+                </div>
+
+                <section class="mission-grid" aria-label="Core responsibilities">
+                    <article class="mission-card">
+                        <p class="label">01 / Operations</p>
+                        <h3>Robots & drones</h3>
+                        <p>Run manipulation and locomotion sessions following engineering-defined protocols.</p>
+                    </article>
+                    <article class="mission-card">
+                        <p class="label">02 / Data</p>
+                        <h3>AI training</h3>
+                        <p>Validate, annotate, and prepare collected data for model training.</p>
+                    </article>
+                    <article class="mission-card">
+                        <p class="label">03 / Field</p>
+                        <h3>Mission ready</h3>
+                        <p>Check equipment, support client demonstrations, and assist with occasional on-site operations.</p>
+                    </article>
+                </section>
             </div>
-        <section>
-            <h2>More Information</h2>
-                <p><a href="https://www.linkedin.com/in/alanbitts/">LinkedIn</a> / <a href="https://github.com/rui-viveiros">GitHub</a> / <a href="contact.html">Email</a></p>
-        </section>
+        </div>
     </main>
 </body>
 </html>
