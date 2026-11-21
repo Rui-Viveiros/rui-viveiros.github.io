@@ -1,78 +1,270 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="HandheldFriendly" content="true">
+    <title>Rui Viveiros | Robotics, AI Data &amp; Web Development</title>
+    <meta name="description" content="Rui Viveiros works across robotics, AI training data and full-stack web development, with Python, JavaScript and containers.">
     <meta name="author" content="Rui Viveiros">
-    <meta name="language" content="english">
-    <meta name="description" content="Rui Viveiros, Robot Teleoperator.">
-    <meta name="title" content="Rui Viveiros | Robot Teleoperator">
     <meta name="robots" content="index,follow">
-    <meta name="copyright" content="Copyright 2024 Rui Viveiros">
+    <meta name="theme-color" content="#070b0f">
+    <meta property="og:title" content="Rui Viveiros | Robotics, AI Data &amp; Web Development">
+    <meta property="og:description" content="Robotics, AI training data and full-stack web development.">
+    <meta property="og:image" content="static/hero.jpeg">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070b0f'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%234ef0c3'%3ERV%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/navigation.js" defer></script>
-    <meta name="format-detection" content="telephone=yes"/>
-    <title>Rui Viveiros | Robot Teleoperator</title>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="nav-flex header-nav" role="navigation" aria-label="Main navigation">
-        <button class="header-nav-toggle" type="button" aria-controls="header-nav-links" aria-expanded="false" aria-label="Toggle main navigation">Menu</button>
-        <div class="header-nav-links" id="header-nav-links">
-            <a href="index.html" class="link">About me</a>
-            <a href="links.html" class="link">Links</a>
-        </div>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <main id="main-content" role="main">
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="window-controls" aria-hidden="true">
-                    <span class="window-control red"></span>
-                    <span class="window-control yellow"></span>
-                    <span class="window-control green"></span>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="Rui Viveiros, back to top">
+                <span class="brand-prompt">~/</span>rui.viveiros<span class="cursor" aria-hidden="true"></span>
+            </a>
+            <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about"><span>01</span>About</a></li>
+                <li><a href="#stack"><span>02</span>Stack</a></li>
+                <li><a href="#projects"><span>03</span>Projects</a></li>
+                <li><a href="#contact"><span>04</span>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero container" id="top">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Online</p>
+                <h1>Rui Viveiros</h1>
+                <p class="hero-role">
+                    <span class="mono accent">&gt;</span>
+                    <span class="typed" data-words="Robotics &amp; AI Data|Full-Stack Developer|Linux &amp; Containers">Robotics &amp; AI Data</span>
+                </p>
+                <p class="hero-lede">
+                    I work where <strong>software, data and robotics</strong> meet. I build web apps with Python,
+                    JavaScript and containers, and I collect and prepare the real-world robot data that AI models learn from.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View my work</a>
+                    <a class="btn btn-ghost" href="#contact">Get in touch</a>
                 </div>
-                <div class="terminal-title">rui@portfolio:~/about</div>
             </div>
 
-            <div class="terminal-body">
-                <div class="hero-layout">
-                    <div>
-                        <h1>Robot<br>Teleoperator</h1>
-                        <p class="hero-copy"><strong>I teleoperate quadruped robots, humanoids, and drones.</strong> I lead data collection that helps train artificial intelligence models.</p>
-                        <p class="status-line">Status: Data collection active // signal stable</p>
-                    </div>
+            <aside class="hero-panel" aria-label="Profile">
+                <div class="panel-head">
+                    <span>rui.profile</span>
+                    <span class="pill"><span class="dot" aria-hidden="true"></span>Online</span>
+                </div>
+                <div class="portrait">
+                    <img src="static/hero.jpeg" alt="Portrait of Rui Viveiros" width="320" height="320">
+                    <span class="corner tl" aria-hidden="true"></span>
+                    <span class="corner tr" aria-hidden="true"></span>
+                    <span class="corner bl" aria-hidden="true"></span>
+                    <span class="corner br" aria-hidden="true"></span>
+                    <span class="scanline" aria-hidden="true"></span>
+                </div>
+                <dl class="telemetry">
+                    <div><dt>Builds</dt><dd>Full-stack web apps</dd></div>
+                    <div><dt>Works with</dt><dd>Robots &amp; AI data</dd></div>
+                    <div><dt>Runs on</dt><dd>Linux · Docker</dd></div>
+                    <div><dt>Session</dt><dd class="mono" id="session-clock">00:00:00</dd></div>
+                </dl>
+            </aside>
+        </section>
 
-                    <figure class="operator-portrait">
-                        <div class="portrait-frame">
-                            <img src="./static/hero.jpeg" alt="Portrait of Rui Viveiros" class="profile-photo">
-                            <span class="portrait-status">Identity verified</span>
-                        </div>
-                        <figcaption>Rui Viveiros <span>// Operator ID 01</span></figcaption>
+        <!-- ABOUT -->
+        <section class="section container" id="about">
+            <header class="section-head">
+                <p class="section-index">01</p>
+                <h2>About</h2>
+            </header>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a technologist with a foot in two worlds. I build software: web apps, APIs and
+                        containerised services with Python and JavaScript. I also work hands-on with robots, operating
+                        them and making sure the data they produce is accurate and ready for training AI models.
+                    </p>
+                    <p>
+                        I got here by an unusual route. I studied communication, moved into IT support, and then trained as a
+                        full-stack developer through the Meta and IBM professional programmes. That mix means I can talk to
+                        engineers, read a stack trace, and explain technical work clearly to people who aren't technical.
+                    </p>
+                    <p class="mono muted">I work daily on Linux with Bash, SSH, Docker and Git, with AI agents as coding partners.</p>
+                </div>
+                <ul class="stats reveal" aria-label="At a glance">
+                    <li><span class="stat-value">4</span><span class="stat-label">Web projects shipped</span></li>
+                    <li><span class="stat-value">2</span><span class="stat-label">Professional developer certificates</span></li>
+                    <li><span class="stat-value">8</span><span class="stat-label">Specialisation courses completed</span></li>
+                    <li><span class="stat-value">3</span><span class="stat-label">Robot platform types operated</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section class="section container" id="stack">
+            <header class="section-head">
+                <p class="section-index">02</p>
+                <h2>Stack</h2>
+            </header>
+            <div class="stack-grid">
+                <article class="stack-card reveal">
+                    <p class="stack-path">/dev</p>
+                    <h3>Development</h3>
+                    <ul class="tags">
+                        <li>Python</li><li>JavaScript</li><li>Django</li><li>Node.js</li>
+                        <li>Express</li><li>React</li><li>MongoDB</li><li>SQL</li>
+                        <li>Bootstrap</li><li>Tailwind CSS</li>
+                    </ul>
+                </article>
+                <article class="stack-card reveal">
+                    <p class="stack-path">/infra</p>
+                    <h3>Systems &amp; tooling</h3>
+                    <ul class="tags">
+                        <li>Linux</li><li>macOS</li><li>Bash</li><li>SSH</li>
+                        <li>Docker</li><li>Kubernetes</li><li>OpenShift</li>
+                        <li>Git &amp; GitHub</li><li>GitHub Actions</li><li>AI coding agents</li>
+                    </ul>
+                </article>
+                <article class="stack-card reveal">
+                    <p class="stack-path">/data</p>
+                    <h3>Data &amp; AI</h3>
+                    <ul class="tags">
+                        <li>Data collection</li><li>Annotation</li><li>Quality validation</li>
+                        <li>Python for data science</li><li>Flask AI apps</li><li>Generative AI</li>
+                    </ul>
+                </article>
+                <article class="stack-card reveal">
+                    <p class="stack-path">/robotics</p>
+                    <h3>Robotics</h3>
+                    <ul class="tags">
+                        <li>Quadruped robots</li><li>Humanoids</li><li>Drones / UAV</li>
+                        <li>Teleoperation</li><li>Field ops</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section container" id="projects">
+            <header class="section-head">
+                <p class="section-index">03</p>
+                <h2>Projects</h2>
+            </header>
+
+            <article class="project-feature reveal">
+                <div class="project-media">
+                    <figure>
+                        <img src="static/projects/dealership.webp" alt="Dealership platform: table of dealers filtered by state" loading="lazy" width="1151" height="316">
+                    </figure>
+                    <figure>
+                        <img src="static/projects/dealership-ci.webp" alt="GitHub Actions run linting Python and JavaScript files" loading="lazy" width="1147" height="330">
                     </figure>
                 </div>
+                <div class="project-info">
+                    <p class="stack-path">featured // capstone</p>
+                    <h3>Dealership Platform</h3>
+                    <p>
+                        A full-stack web app for a national car dealership network. Users sign up, browse dealers
+                        by state, and post reviews. A sentiment-analysis microservice scores each review.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Django back end with an admin panel and user registration</li>
+                        <li>REST endpoints for dealership and vehicle inventory data</li>
+                        <li>Flask microservice for review sentiment analysis</li>
+                        <li>Containerised with Docker, deployed on Kubernetes, linted in CI</li>
+                    </ul>
+                    <ul class="tags small">
+                        <li>Django</li><li>React</li><li>Node.js</li><li>MongoDB</li><li>Flask</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li>
+                    </ul>
+                </div>
+            </article>
 
-                <section class="mission-grid" aria-label="Core responsibilities">
-                    <article class="mission-card">
-                        <p class="label">01 / Operations</p>
-                        <h3>Robots & drones</h3>
-                        <p>Run manipulation and locomotion sessions following engineering-defined protocols.</p>
-                    </article>
-                    <article class="mission-card">
-                        <p class="label">02 / Data</p>
-                        <h3>AI training</h3>
-                        <p>Validate, annotate, and prepare collected data for model training.</p>
-                    </article>
-                    <article class="mission-card">
-                        <p class="label">03 / Field</p>
-                        <h3>Mission ready</h3>
-                        <p>Check equipment, support client demonstrations, and assist with occasional on-site operations.</p>
-                    </article>
-                </section>
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <span class="stack-path">web app</span>
+                    </div>
+                    <h3>Blog Platform</h3>
+                    <p>A CRUD blog built on Node.js, Express and MongoDB, with server-side rendering, clean routing and an MVC structure.</p>
+                    <ul class="tags small"><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <span class="stack-path">front end</span>
+                        <a class="project-link" href="https://alanbitts-gallery.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the photography gallery (opens in a new tab)">↗</a>
+                    </div>
+                    <h3>Photography Gallery</h3>
+                    <p>A web gallery of photos I've taken over the years, built with Tailwind CSS and light JavaScript animation.</p>
+                    <ul class="tags small"><li>Tailwind CSS</li><li>JavaScript</li></ul>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <span class="stack-path">this site</span>
+                        <a class="project-link" href="https://github.com/rui-viveiros" target="_blank" rel="noopener noreferrer" aria-label="Open my GitHub profile (opens in a new tab)">↗</a>
+                    </div>
+                    <h3>Personal Portfolio</h3>
+                    <p>The site you're on: hand-written HTML, CSS and vanilla JavaScript with no build step, hosted on GitHub Pages.</p>
+                    <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                </article>
             </div>
-        </div>
+
+            <div class="certs reveal">
+                <h3 class="certs-title"><span class="stack-path">/education</span></h3>
+                <div class="certs-grid">
+                    <ul>
+                        <li><strong>IBM Full-Stack Developer</strong> Professional Certificate</li>
+                        <li><strong>Meta Front-End Developer</strong> Professional Certificate</li>
+                        <li><strong>IT Technician</strong> Professional Certificate</li>
+                        <li><strong>BA, Communication, Culture &amp; Organisations</strong>, Universidade da Madeira</li>
+                    </ul>
+                    <ul class="muted">
+                        <li>Django applications with SQL and databases</li>
+                        <li>Back-end apps with Node.js and Express</li>
+                        <li>AI applications with Python and Flask</li>
+                        <li>Microservices and serverless</li>
+                        <li>Containers: Docker, Kubernetes &amp; OpenShift</li>
+                        <li>Python for data science, AI and development</li>
+                        <li>Front-end apps with React</li>
+                        <li>Generative AI for software development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section container" id="contact">
+            <div class="contact-card reveal">
+                <p class="section-index">04</p>
+                <h2>Open a channel</h2>
+                <p>Building a web app, working with AI data, or bringing robots into the field? I'd like to hear about it.</p>
+                <div class="contact-links">
+                    <a class="contact-link" href="https://github.com/rui-viveiros" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-label">GitHub</span>
+                        <span class="mono">@rui-viveiros</span>
+                    </a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/rui-viveiros/" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="mono">in/rui-viveiros</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer container">
+        <p class="mono">© <span id="year">2026</span> Rui Viveiros</p>
+        <p class="mono muted">Built by hand · <a href="#top">Back to top ↑</a></p>
+    </footer>
 </body>
 </html>
